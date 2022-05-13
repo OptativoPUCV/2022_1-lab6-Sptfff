@@ -109,3 +109,14 @@ sudoku.c:49:20: error: ‘j’ undeclared (first use in this function)
 sudoku.c:49:20: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 96d829d
+Fri May 13 23:11:13 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+test.c: In function ‘is_valid’:
+sudoku.c:49:19: error: ‘j’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+     if (n->sudo[i][j] != 1){
+         ~~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+b123aad
