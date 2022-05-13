@@ -44,33 +44,12 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  //PARA TODA LA CUADRICULA
-<<<<<<< HEAD
-  
-=======
+
   for (int i = 0; i < 9; i++){
-    if (n->sudo[i][])
+    if (n->sudo[i][j] != 1){
+      return 0; 
+    }
   }
->>>>>>> af16c2fdf0d25c0a2e77b0ac4b1f156491baa6d7
-
-
-
-
-
-
-  //PARA EL 3X3
-<<<<<<< HEAD
-
-  
-=======
-  int k=4,p; 
-  for(p=0;p<9;p++){
-      int i=3*(k/3) + (p/3) ;
-      int j=3*(k%3) + (p%3) ;
-      printf("%d ",nodo->sudo[i][j]);
-      if(p%3 == 2) printf("\n");
-  }
->>>>>>> af16c2fdf0d25c0a2e77b0ac4b1f156491baa6d7
   return 1;
 }
 
