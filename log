@@ -4,3 +4,25 @@ Thu May 12 15:45:58 UTC 2022:
  tests:  2|4
 total_score: 15/70
 d369b75
+Fri May 13 20:11:25 UTC 2022: 
+ sudoku.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:20: error: ‘j’ undeclared (first use in this function)
+     if (n->sudo[i][j] == 0){
+                    ^
+sudoku.c:49:20: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:64:20: error: ‘nodo’ undeclared (first use in this function); did you mean ‘Node’?
+       printf("%d ",nodo->sudo[i][j]);
+                    ^~~~
+                    Node
+sudoku.c:63:11: error: variable ‘j’ set but not used [-Werror=unused-but-set-variable]
+       int j=3*(k%3) + (p%3) ;
+           ^
+sudoku.c:62:11: error: variable ‘i’ set but not used [-Werror=unused-but-set-variable]
+       int i=3*(k/3) + (p/3) ;
+           ^
+cc1: all warnings being treated as errors
+Compilation failed
+608c143
