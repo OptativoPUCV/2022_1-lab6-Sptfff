@@ -120,3 +120,9 @@ sudoku.c:49:19: error: ‘j’ may be used uninitialized in this function [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 b123aad
+Sat May 14 02:29:27 UTC 2022: 
+ sudoku.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+332a472
