@@ -50,6 +50,7 @@ int is_valid(Node* n){
   }else{
     for(i = 0; i<9; i++){
       if (n->sudo[i][j] != 0){
+        printf("%i\n", n->sudo[i][j]);
         return 0;
       }else{
         return 1;
@@ -57,8 +58,10 @@ int is_valid(Node* n){
     }
     for (j = 0; j<9; j++){
       if (n->sudo[i][j] != 0){
+        printf("%i\n", n->sudo[i][j]);
         return 0;
         }else{
+        
           return 1;
         }
     }
