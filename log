@@ -277,3 +277,67 @@ sudoku.c:153:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 99a97ca
+Mon May 16 03:49:34 UTC 2022: 
+ sudoku.c | 24 ++++++++++++++++++++++--
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:158:10: error: ‘I’ undeclared (first use in this function)
+   push(S,I);
+          ^
+sudoku.c:158:10: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:159:10: error: implicit declaration of function ‘size’ [-Werror=implicit-function-declaration]
+   while (size(S) != 0){
+          ^~~~
+sudoku.c:160:6: error: unknown type name ‘node’; did you mean ‘Node’?
+      node* n = pop(S);
+      ^~~~
+      Node
+sudoku.c:160:16: error: void value not ignored as it ought to be
+      node* n = pop(S);
+                ^~~
+sudoku.c:161:9: error: expected ‘(’ before ‘n’
+      if n.visited==true continue;
+         ^
+sudoku.c:161:10: error: request for member ‘visited’ in something not a structure or union
+      if n.visited==true continue;
+          ^
+sudoku.c:164:7: error: request for member ‘visited’ in something not a structure or union
+      n.visited=true
+       ^
+sudoku.c:164:16: error: ‘true’ undeclared (first use in this function); did you mean ‘free’?
+      n.visited=true
+                ^~~~
+                free
+sudoku.c:165:6: error: expected ‘;’ before ‘List’
+      List* adj=get_adj_nodes(n);
+      ^~~~
+sudoku.c:166:6: error: unknown type name ‘node’; did you mean ‘Node’?
+      node* aux= first(adj);
+      ^~~~
+      Node
+sudoku.c:166:23: error: ‘adj’ undeclared (first use in this function)
+      node* aux= first(adj);
+                       ^~~
+sudoku.c:160:12: error: variable ‘n’ set but not used [-Werror=unused-but-set-variable]
+      node* n = pop(S);
+            ^
+test.c:245:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:262:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:262:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:245:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:7:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+acd5534
