@@ -44,17 +44,54 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  //int i = 0, j = 0;
   
   
-
-  int k=4,p; 
-  for(p=0;p<9;p++){
-      int i=3*(k/3) + (p/3) ;
-      int j=3*(k%3) + (p%3) ;
-      printf("%d ",n->sudo[i][j]);
-      if(p%3 == 2) printf("\n");
+  for (int i = 0; i < 9; i++){
+    int fila_valida[10] = {0,0,0,0,0,0,0,0,0,0};
+    for (int j = 0; j < 9; j++){
+      if (fila_valida[n->sudo[i][j]]){
+        return 0;
+      }
+      if ( fila_valida[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
+        fila_valida[n->sudo[i][j]] = 1;
+      }
+    }
+    
   }
+
+  for (int z = 0; z < 9; z++){
+    int columnas_valida[10] = {0,0,0,0,0,0,0,0,0,0};
+
+    for (int y = 0; y < 9; y++){
+      if (columnas_valida[n->sudo[z][y]] != 0){
+        return 0;
+      }
+      if (columnas_valid[n->sudo[z][y]] == 0 && n->sudo[z][y] != 0){
+        columnas_validas[n->sudo[z][y]] = 1;
+      }
+    }
+  }
+
+  
+  
+  
+  
+  for (int x = 0; x < 9; x++){
+    int subMatriz[10] = {0,0,0,0,0,0,0,0,0,0};
+    int k = s, p;
+    for(p=0;p<9;p++){
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+
+      if (subMatriz[n->sudo[i][j]] != 0){
+        return 0;
+      }
+      if (subMatriz[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+        subMatriz[n->sudo[i][j]] = 1;
+      }
+    }
+  }
+  
   return 1;
 }
 

@@ -209,3 +209,22 @@ Sun May 15 19:35:01 UTC 2022:
  tests:  3|3
 total_score: 25/70
 661b2cb
+Mon May 16 03:41:33 UTC 2022: 
+ sudoku.c | 45 +++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 41 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:69:11: error: ‘columnas_valid’ undeclared (first use in this function); did you mean ‘columnas_valida’?
+       if (columnas_valid[n->sudo[z][y]] == 0 && n->sudo[z][y] != 0){
+           ^~~~~~~~~~~~~~
+           columnas_valida
+sudoku.c:69:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:70:9: error: ‘columnas_validas’ undeclared (first use in this function); did you mean ‘columnas_valida’?
+         columnas_validas[n->sudo[z][y]] = 1;
+         ^~~~~~~~~~~~~~~~
+         columnas_valida
+sudoku.c:81:13: error: ‘s’ undeclared (first use in this function)
+     int k = s, p;
+             ^
+Compilation failed
+84afee3
