@@ -60,13 +60,13 @@ int is_valid(Node* n){
   }
 
   for (int z = 0; z < 9; z++){
-    int columnas_valida[10] = {0,0,0,0,0,0,0,0,0,0};
+    int columnas_validas[10] = {0,0,0,0,0,0,0,0,0,0};
 
     for (int y = 0; y < 9; y++){
       if (columnas_valida[n->sudo[z][y]] != 0){
         return 0;
       }
-      if (columnas_valid[n->sudo[z][y]] == 0 && n->sudo[z][y] != 0){
+      if (columnas_validas[n->sudo[z][y]] == 0 && n->sudo[z][y] != 0){
         columnas_validas[n->sudo[z][y]] = 1;
       }
     }

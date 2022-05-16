@@ -228,3 +228,18 @@ sudoku.c:81:13: error: ‘s’ undeclared (first use in this function)
              ^
 Compilation failed
 84afee3
+Mon May 16 03:41:45 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:66:11: error: ‘columnas_valida’ undeclared (first use in this function); did you mean ‘columnas_validas’?
+       if (columnas_valida[n->sudo[z][y]] != 0){
+           ^~~~~~~~~~~~~~~
+           columnas_validas
+sudoku.c:66:11: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:81:13: error: ‘s’ undeclared (first use in this function)
+     int k = s, p;
+             ^
+Compilation failed
+740b98d
