@@ -243,3 +243,14 @@ sudoku.c:81:13: error: ‘s’ undeclared (first use in this function)
              ^
 Compilation failed
 740b98d
+Mon May 16 03:41:53 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:81:13: error: ‘s’ undeclared (first use in this function)
+     int k = s, p;
+             ^
+sudoku.c:81:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c19efaa
